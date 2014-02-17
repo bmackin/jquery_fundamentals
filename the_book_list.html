@@ -1,0 +1,77 @@
+<!-- // EXERCISE: The Book List
+
+// Keep track of which books you read and which books you want to read!
+
+// Create a webpage with an h1 of "My Book List".
+// Add a script tag to the bottom of the page, where all your JS will go.
+
+// Copy the array of books from the previous exercise.
+// Iterate through the array of books. For each book, create a p element with the book title and author and append it to the page.
+// Bonus: Use a ul and li to display the books.
+// Bonus: add a property to each book with the URL of the book cover, and add an img element for each book on the page.
+// Bonus: Change the style of the book depending on whether you have read it or not. -->
+
+<!DOCTYPE html>
+ <html>
+  <head>
+   <meta charset="utf-8"/>
+   <title>MY BOOK LIST</title>
+ </head>
+ <body>
+   <h1>MY BOOK LIST</h1>
+
+  <script>
+
+
+    var body = document.getElementsByTagName('body')[0];
+    var listUl = document.createElement('ul')
+    body.style.fontFamily='Myriad, sans-serif'
+
+
+  var readingList = [
+
+  		{
+  			title: "The Tattoo Artist",
+  			author: "Jill Ciment",
+  			coverUrl: 'http://youthedesigner.com/wp-content/uploads/2010/03/beautiful-book-covers-29.png',
+        alreadyRead: true
+  		},
+  
+  		{
+  			title: "The Terror",
+  			author: "Dan Simmons",
+  			coverUrl: 'http://youthedesigner.com/wp-content/uploads/2010/03/beautiful-book-covers-73.jpg',
+        alreadyRead: true
+  		},
+  
+  		{
+  			title: "The Crow's Vow",
+  			author: "Susan Briscoe",
+  			coverUrl: 'http://youthedesigner.com/wp-content/uploads/2010/03/beautiful-book-covers-60.png',
+        alreadyRead: false
+  		},
+  
+  		{
+  			title: "The Letters Of Noel Coward",
+  			author: "Noel Coward",
+  			coverUrl: 'http://youthedesigner.com/wp-content/uploads/2010/03/beautiful-book-covers-07.png',
+        alreadyRead: false
+  		}
+  	];
+
+    for (i=0; i < readingList.length; i++) {
+      var listLi = document.createElement('li')
+      var bookInfo = document.createTextNode(readingList[i].title + ', by ' + readingList[i].author);
+      var coverImage = document.createElement('img');
+      coverImage.src = readingList[i].coverUrl;
+      listLi.appendChild(coverImage);
+      listLi.appendChild(bookInfo);
+      listUl.appendChild(listLi);
+    };
+      body.appendChild(listUl);
+
+
+
+  </script>
+  </body>
+ </html>

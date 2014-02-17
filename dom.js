@@ -10,13 +10,24 @@
 // Find the Google search button and store it in a variable.
 // Modify the text of the button so that it says "Yahooo!" instead.
 
+
+var googleLogo = document.getElementById('hplogo');
+googleLogo.style.background="url(http://upload.wikimedia.org/wikipedia/commons/2/24/Yahoo%21_logo.svg)";
+googleLogo.style.backgroundSize = "280px";
+
+
+var newButton = document.getElementById('gbqfba')
+newButton.innerHTML='Yahoo! Search';
+
+
+
 // EXERCISE: About Me
 
 // Cuz every webpage needs an "About" section.
 
 // Start with this HTML and save it as "aboutme.html":
-// <!DOCTYPE html>
-// <html>
+//   <!DOCTYPE html>
+// <html>   
 //  <head>
 //   <meta charset="utf-8"/>
 //   <title>About Me</title>
