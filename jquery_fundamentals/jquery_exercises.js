@@ -83,29 +83,40 @@
 // EXERCISE: Count
 // Show the number of children in an alert
 // Hint: you can use .children, .length and alert or you could use .find, .size and alert. the alert should show 5
-$(document).ready(function() {
-	var numChildren = $('#target').find('.child').length;
-	{ alert(numChildren)}
-});
+// $(document).ready(function() {
+// 	var numChildren = $('#target').find('.child').length;
+// 	{ alert(numChildren)}
+// });
 
 // EXERCISE: Animate
-
 // Make "#target" double size with animation
 // Hint: you can use .animate, .width, and .height
+// $(document).ready(function() {
+// 	$('#target').animate({
+// 		width: "300px",
+// 		height: "380px"});
+// });
 
 // EXERCISE: Alternate Color
-
 // Make the list-box alternating. (Make odd options a different color)
 // Hint: you can select the option and use .filter and .css
+// $(document).ready(function() {
+// 	$("option").filter(":even").css("background-color", "green");
+// 	$("option").filter(":odd").css("background-color", "blue");
+// });
 
 // EXERCISE: All But One
-
 // Remove all children of "#target" but h2
 // Hint: you can use .children, .not and .remove
+// $(document).ready(function() {
+// 	$('#target').children().not("h2").remove();
+// });
+
 
 // EXERCISE: Without Children
-
 // Remove all 'div' whitch has no child elements.
 // Hint: you can use .not and .remove. Look closely at what options you can pass .not
 
-
+$(document).ready(function() {
+	$("div").remove(":empty");
+});
