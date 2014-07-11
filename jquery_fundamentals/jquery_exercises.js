@@ -117,6 +117,6 @@
 // Remove all 'div' whitch has no child elements.
 // Hint: you can use .not and .remove. Look closely at what options you can pass .not
 
-$(document).ready(function() {
-	$("div").remove(":empty");
-});
+// $(document).ready(function() {
+// 	$("div").remove(":empty");
+// });
